@@ -95,4 +95,35 @@ input {
 .complete-purchase-button:hover {
     background-color: #fcdcdd;
 }
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
 
+footer {
+    background-color: #c6d99a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
