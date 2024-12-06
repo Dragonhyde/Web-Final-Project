@@ -1,13 +1,10 @@
-/* styles.css */
-
-/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fefbde; /* Light cream background */
-    color: #333; /* Default text color */
-    line-height: 1.8; /* Improved line height for readability */
+    background-color: #fefbde; 
+    color: #333; 
+    line-height: 1.8; 
 }
 
 header {
@@ -74,10 +71,10 @@ h1 {
 }
 
 nav ul li a:hover {
-    background-color: #c6d99a; /* Light green hover effect */
+    background-color: #c6d99a; 
 }
 
-/* About Page Styling */
+
 .about-container {
     display: flex;
     flex-direction: row;
@@ -85,7 +82,7 @@ nav ul li a:hover {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+    flex-wrap: wrap; /
 }
 
 .about-image {
@@ -106,26 +103,13 @@ nav ul li a:hover {
     padding-left: 20px;
     opacity: 0;
     transition: opacity 2s ease-in-out;
-    font-family: 'Georgia', serif; /* Cozy and elegant font */
-    color: #444; /* Slightly darker text for comfort */
+    font-family: 'Georgia', serif; 
+    color: #444; 
 }
 
-.about-text.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 h1 {
-    color: #c6d99a; /* Soft green for headings */
+    color: #c6d99a; 
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -133,24 +117,24 @@ h1 {
 p {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #555; /* Darker gray for readability */
+    color: #555; 
     line-height: 1.8;
     letter-spacing: 0.5px;
-    text-align: justify; /* Justify text for a neat, aligned look */
+    text-align: justify; 
     max-width: 800px;
 }
 
 strong {
-    color: black; /* Bold text in black */
+    color: black; 
     font-weight: bold;
 }
 
-/* Add a small margin on the bottom of each paragraph to give more spacing */
+
 p:last-child {
     margin-bottom: 0;
 }
 
-/* Responsive Design: For smaller screens */
+
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
