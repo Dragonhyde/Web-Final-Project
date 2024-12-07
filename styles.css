@@ -112,13 +112,12 @@ h1 {
 }
 
 .shop-now {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #f9c1ca;
     color: white;
-    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #fefbde;
     border-radius: 25px;  
-    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .shop-now:hover {
