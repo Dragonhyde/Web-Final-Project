@@ -127,6 +127,18 @@ input {
 
 .remove-item:hover {
     background-color: #fcdcdd;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
 
 footer {
     background-color: #c6d99a;
@@ -150,13 +162,4 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
+
