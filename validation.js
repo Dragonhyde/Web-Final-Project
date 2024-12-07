@@ -1,3 +1,33 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartContainer = document.getElementById('cart-items');
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        let total = 0;
+        cart.forEach(item => {
+            const row = document.createElement('div');
+            row.className = 'cart-item';
+            row.innerHTML = `
+                <span>${item.name}</span>
+                <span>${item.price}</span>
+            `;
+            cartContainer.appendChild(row);
+            total += parseFloat(item.price.replace('$', ''));
+        });
+        const totalRow = document.createElement('div');
+        totalRow.className = 'cart-total';
+        totalRow.innerHTML = `
+            <strong>Total:</strong>
+            <span>$${total.toFixed(2)}</span>
+        `;
+        cartContainer.appendChild(totalRow);
+    }
+});
+
+// Retain the existing form validation code
+
 document.getElementById('checkout-form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent form from submitting immediately to handle validation
 
