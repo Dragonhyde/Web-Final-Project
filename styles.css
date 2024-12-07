@@ -75,7 +75,7 @@ h1 {
     position: relative;
     width: 80%;
     margin: auto;
-    overflow: hidden; /* Ensures only the visible images are shown */
+    overflow: hidden; 
 }
 
 .carousel-track {
@@ -116,7 +116,7 @@ h1 {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #f9c1ca;
+    background-color: #fcdcdd;
     border-radius: 25px;
     transition: background-color 0.3s;
     margin-top: 20px; 
