@@ -113,7 +113,9 @@ p {
     display: flex; align-items: center; margin-left: 20rem; padding: 3rem;
 }
 .product-info img {
-    margin-right: 20px;}
+    margin-right: 20px;
+    border-radius: 10px;
+}
     .product-info div {
         margin-left: 15rem; margin-bottom: 10rem;
     }
@@ -123,6 +125,7 @@ p {
         background-color: #c6d99a;
         margin-left: 45rem;
         padding: 1rem;font-size: 15px;
+        border-radius: 10px;
     }
 .Go-to-cart:hover {
     background-color: #fcdcdd; 
