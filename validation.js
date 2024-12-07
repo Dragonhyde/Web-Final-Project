@@ -2,58 +2,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-items');
 
-    if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>Your cart is empty.</p>';
-    } else {
-        let total = 0;
-        cart.forEach(item => {
-            const row = document.createElement('div');
-            row.className = 'cart-item';
-            row.innerHTML = `
-                <span>${item.name}</span>
-                <span>${item.price}</span>
+    if (cartContainer) { // Check if cart container exists
+        if (cart.length === 0) {
+            cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+        } else {
+            let total = 0;
+            cart.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'cart-item';
+                row.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>${item.price}</span>
+                `;
+                cartContainer.appendChild(row);
+                total += parseFloat(item.price.replace('$', ''));
+            });
+            const totalRow = document.createElement('div');
+            totalRow.className = 'cart-total';
+            totalRow.innerHTML = `
+                <strong>Total:</strong>
+                <span>$${total.toFixed(2)}</span>
             `;
-            cartContainer.appendChild(row);
-            total += parseFloat(item.price.replace('$', ''));
-        });
-        const totalRow = document.createElement('div');
-        totalRow.className = 'cart-total';
-        totalRow.innerHTML = `
-            <strong>Total:</strong>
-            <span>$${total.toFixed(2)}</span>
-        `;
-        cartContainer.appendChild(totalRow);
+            cartContainer.appendChild(totalRow);
+        }
     }
 });
 
-// Retain the existing form validation code
-
+// Form validation and submission handling
 document.getElementById('checkout-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from submitting immediately to handle validation
+    e.preventDefault(); // Prevent form submission to handle custom validation
 
     let valid = true;
-    let errorMessage = "";
+    let errorMessages = [];
 
     // Validate and format phone number
     const phoneField = document.getElementById('phone');
-    let phone = phoneField.value.replace(/\D/g, "");  // Remove all non-numeric characters
+    let phone = phoneField.value.replace(/\D/g, "");  // Remove non-numeric characters
 
-    // Check if phone number is exactly 10 digits long
     if (phone.length !== 10) {
         valid = false;
-        errorMessage += "Phone number must be exactly 10 digits long.\n";
+        errorMessages.push("Phone number must be exactly 10 digits.");
     } else {
-        // Format the phone number as (XXX) XXX-XXXX
         phone = `(${phone.substring(0, 3)}) ${phone.substring(3, 6)}-${phone.substring(6, 10)}`;
-        phoneField.value = phone;  // Update the field with formatted phone number
+        phoneField.value = phone; // Update field with formatted phone number
     }
 
     // Validate card number
     const cardNumber = document.getElementById('card-number').value;
-    const cardRegex = /^\d{16}$/;
-    if (!cardRegex.test(cardNumber)) {
+    if (!/^\d{16}$/.test(cardNumber)) {
         valid = false;
-        errorMessage += "Card number must be 16 digits.\n";
+        errorMessages.push("Card number must be exactly 16 digits.");
     }
 
     // Validate expiry date
@@ -61,34 +59,33 @@ document.getElementById('checkout-form').addEventListener('submit', function (e)
     const expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/; // Matches MM/YY format
     if (!expiryRegex.test(expiry)) {
         valid = false;
-        errorMessage += "Expiry date must be in MM/YY format.\n";
+        errorMessages.push("Expiry date must be in MM/YY format.");
     } else {
         const [month, year] = expiry.split('/').map(Number);
         const today = new Date();
-        const expiryDate = new Date(`20${year}`, month - 1);
+        const expiryDate = new Date(`20${year}`, month - 1); // Convert to Date object
         if (expiryDate < today) {
             valid = false;
-            errorMessage += "Expiry date cannot be in the past.\n";
+            errorMessages.push("Expiry date cannot be in the past.");
         }
     }
 
     // Validate PIN
     const pin = document.getElementById('pin').value;
-    const pinRegex = /^\d{3}$/;
-    if (!pinRegex.test(pin)) {
+    if (!/^\d{3}$/.test(pin)) {
         valid = false;
-        errorMessage += "PIN must be exactly 3 digits.\n";
+        errorMessages.push("PIN must be exactly 3 digits.");
     }
 
+    // Display errors or proceed to Thank You page
     if (!valid) {
-        alert(errorMessage); // Show error message if validation fails
+        alert(errorMessages.join("\n")); // Display all error messages
     } else {
-        // Redirect to Thank You page after form is validated
-        window.location.href = 'Thanks.html'; // Redirect to the thank you page
+        window.location.href = 'Thanks.html'; // Redirect on successful validation
     }
 });
 
-// Phone number auto-formatting while typing (format as (XXX) XXX-XXXX)
+// Phone number auto-formatting while typing
 document.getElementById('phone').addEventListener('input', function (e) {
     let phone = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
 
@@ -97,7 +94,7 @@ document.getElementById('phone').addEventListener('input', function (e) {
         phone = phone.slice(0, 10);
     }
 
-    // Format the phone number as (XXX) XXX-XXXX
+    // Format as (XXX) XXX-XXXX
     if (phone.length <= 3) {
         e.target.value = `(${phone}`;
     } else if (phone.length <= 6) {
@@ -106,4 +103,5 @@ document.getElementById('phone').addEventListener('input', function (e) {
         e.target.value = `(${phone.substring(0, 3)}) ${phone.substring(3, 6)}-${phone.substring(6, 10)}`;
     }
 });
+
 
