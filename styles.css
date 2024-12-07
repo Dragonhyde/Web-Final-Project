@@ -1,11 +1,9 @@
-
 body {
     background-color: #fefbde;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-
 
 header {
     background-color: #f9c1ca;
@@ -19,7 +17,6 @@ h1 {
     color: white;
     font-size: 2.5rem;
 }
-
 
 .nav-bar {
     display: flex;
@@ -53,7 +50,6 @@ h1 {
     background-color: #fcdcdd; 
 }
 
-
 .checkout-button {
     background-color: #c6d99a;
     color: white;
@@ -79,6 +75,7 @@ h1 {
     position: relative;
     width: 80%;
     margin: auto;
+    overflow: hidden; /* Ensures only the visible images are shown */
 }
 
 .carousel-track {
@@ -128,7 +125,6 @@ h1 {
     background-color: #c6d99a;
 }
 
-
 .image-text-section {
     display: flex;
     justify-content: center;
@@ -173,7 +169,6 @@ h1 {
 .read-more:hover {
     text-decoration: underline;
 }
-
 
 footer {
     background-color: #c6d99a;
