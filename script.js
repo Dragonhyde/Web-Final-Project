@@ -2,10 +2,10 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 const track = document.querySelector('.carousel-track');
 const images = document.querySelectorAll('.carousel-image');
-const visibleImages = 3; 
+const visibleImages = 3;
 
-const imageWidth = images[0].offsetWidth + 20; 
-let currentIndex = 0;  
+const imageWidth = images[0].offsetWidth + 20; // includes margin/padding if any
+let currentIndex = 0;
 const totalImages = images.length;
 
 const firstImages = Array.from(images).slice(0, visibleImages);
@@ -30,15 +30,14 @@ function updateCarousel() {
 }
 
 nextButton.addEventListener('click', () => {
-
     if (currentIndex === totalAllImages - visibleImages) {
         track.style.transition = 'none'; 
         currentIndex = visibleImages;    
         updateCarousel();
         
-    setTimeout(() => {
-        track.style.transition = 'transform 0.5s ease-in-out';
-    }, 50);
+        setTimeout(() => {
+            track.style.transition = 'transform 0.5s ease-in-out';
+        }, 50);
     } else {
         currentIndex++;
         updateCarousel();
@@ -46,7 +45,6 @@ nextButton.addEventListener('click', () => {
 });
 
 prevButton.addEventListener('click', () => {
-
     if (currentIndex === 0) {
         track.style.transition = 'none';  
         currentIndex = totalAllImages - visibleImages * 2; 
@@ -61,6 +59,7 @@ prevButton.addEventListener('click', () => {
     }
 });
 
+// Auto cycling
 setInterval(() => {
     if (currentIndex === totalAllImages - visibleImages) {
         track.style.transition = 'none'; 
@@ -77,3 +76,4 @@ setInterval(() => {
 }, 3000);  
 
 updateCarousel();
+
