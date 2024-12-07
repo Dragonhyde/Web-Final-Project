@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Add remove functionality
-    document.querySelectorAll('.remove-item').forEach(button => {
-        button.addEventListener('click', function () {
-            const index = this.dataset.index;
+    // Add remove functionality using event delegation
+    cartContainer.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('remove-item')) {
+            const index = e.target.dataset.index;
             cart.splice(index, 1); // Remove item from cart array
             localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
             location.reload(); // Reload the page to reflect changes
-        });
+        }
     });
 });
 
@@ -119,6 +119,7 @@ document.getElementById('phone').addEventListener('input', function (e) {
         e.target.value = `(${phone.substring(0, 3)}) ${phone.substring(3, 6)}-${phone.substring(6, 10)}`;
     }
 });
+
 
 
 
