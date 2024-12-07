@@ -1,42 +1,33 @@
-// Initialize cart in localStorage if not already present
+// Ensure cart is initialized in localStorage
 if (!localStorage.getItem('cart')) {
     localStorage.setItem('cart', JSON.stringify([]));
 }
 
-// Add event listener to "Add to Cart" buttons
+// Add event listeners to all "Add to Cart" buttons
 document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', function () {
+        // Locate the closest product container
         const productElement = this.closest('.product-info');
+        
+        // Extract product name and price
+        const productName = productElement.querySelector('h2').textContent;
+        const productPrice = productElement.querySelector('p').textContent.replace('Price: ', '').trim();
 
-        // Ensure productElement exists
-        if (productElement) {
-            const productName = productElement.querySelector('a')?.textContent?.trim();
-            const productPrice = productElement.querySelector('p')?.textContent?.trim();
+        // Retrieve the cart from localStorage
+        const cart = JSON.parse(localStorage.getItem('cart'));
 
-            // Ensure productName and productPrice are valid
-            if (productName && productPrice) {
-                const parsedPrice = productPrice.replace(/[^\d.]/g, ''); // Extract numerical price
+        // Add the product to the cart
+        cart.push({ name: productName, price: productPrice });
 
-                const cart = JSON.parse(localStorage.getItem('cart'));
-                cart.push({ name: productName, price: `$${parseFloat(parsedPrice).toFixed(2)}` });
-                localStorage.setItem('cart', JSON.stringify(cart));
+        // Save the updated cart back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
 
-                alert(`${productName} added to cart!`);
-            } else {
-                console.error('Product name or price not found.');
-            }
-        } else {
-            console.error('Product element not found.');
-        }
+        // Notify the user
+        alert(`${productName} has been added to your cart!`);
     });
 });
 
-// Redirect to checkout page on "Go to Cart" button click
-const goToCartButton = document.querySelector('.Go-to-cart');
-if (goToCartButton) {
-    goToCartButton.addEventListener('click', () => {
-        window.location.href = 'checkout.html';
-    });
-} else {
-    console.error('"Go to Cart" button not found.');
-}
+// "Go to Cart" button redirects to the checkout page
+document.querySelector('.Go-to-cart').addEventListener('click', () => {
+    window.location.href = 'checkout.html';
+});
