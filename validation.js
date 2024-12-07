@@ -7,16 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
             cartContainer.innerHTML = '<p>Your cart is empty.</p>';
         } else {
             let total = 0;
-            cart.forEach(item => {
+
+            cart.forEach((item, index) => {
                 const row = document.createElement('div');
                 row.className = 'cart-item';
+
                 row.innerHTML = `
                     <span>${item.name}</span>
                     <span>${item.price}</span>
+                    <button class="remove-item" data-index="${index}">Remove</button>
                 `;
+
                 cartContainer.appendChild(row);
                 total += parseFloat(item.price.replace('$', ''));
             });
+
+            // Add total row
             const totalRow = document.createElement('div');
             totalRow.className = 'cart-total';
             totalRow.innerHTML = `
@@ -26,6 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
             cartContainer.appendChild(totalRow);
         }
     }
+
+    // Add remove functionality
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', function () {
+            const index = this.dataset.index;
+            cart.splice(index, 1); // Remove item from cart array
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+            location.reload(); // Reload the page to reflect changes
+        });
+    });
 });
 
 // Form validation and submission handling
@@ -103,5 +119,6 @@ document.getElementById('phone').addEventListener('input', function (e) {
         e.target.value = `(${phone.substring(0, 3)}) ${phone.substring(3, 6)}-${phone.substring(6, 10)}`;
     }
 });
+
 
 
