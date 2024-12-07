@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo1.png" alt="It's New Again logo">
+            <img src="logo1.png" alt="It's New Again logo" class="logo-img">
         </div>
         <nav class="nav-bar">
             <ul>
@@ -22,46 +22,51 @@
         </nav>
         <a href="checkout.html" class="checkout-button">Checkout</a>
     </header>
-
-    <div class="product-text">
-        <img src="icon2.png" alt="Pants icon" class="icon">
+    
+    <section class="product-text">
+        <img src="icon2.png" alt="Pants icon" class="icon" width="150" height="150">
         <h1>Step up your style game with our pants – because your legs deserve the best.</h1>
-        <p>From classic jeans to sleek slacks, and comfy chinos to statement trousers, our collection has something for everyone. Every pair has been expertly cleaned, cared for, and given a second chance to strut their stuff.
-        The quality? Rock solid. The fit? Life-changing. The prices? So good, that they might just knock your socks off (don’t worry, we have socks too). Take a stroll through our selection and let your next favourite pair find you.</p>
-    </div>
+        <p>
+            From classic jeans to sleek slacks, and comfy chinos to statement trousers, our collection has something for everyone. Every pair has been expertly cleaned, cared for, and given a second chance to strut their stuff.
+            The quality? Rock solid. The fit? Life-changing. The prices? So good, that they might just knock your socks off (don’t worry, we have socks too). Take a stroll through our selection and let your next favourite pair find you.
+        </p>
+    </section>
 
-    <div class="product-info">
-        <img src="denimoveralls.jpg" alt="Black Denim Overalls" width="300" height="300">
-        <div>
-            <a href="#">Black Denim Overalls</a>
-            <p>Price: $50.00</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
+    <section class="products">
+        <article class="product-info">
+            <img src="denimoveralls.jpg" alt="Black Denim Overalls" width="300" height="300" class="product-img" style="float: left;">
+            <div>
+                <h2>Black Denim Overalls</h2>
+                <p>Price: $50.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+
+        <article class="product-info">
+            <img src="denimpants.jpg" alt="Denim Pants" width="300" height="300" class="product-img" style="float: left;">
+            <div>
+                <h2>Denim Pants</h2>
+                <p>Price: $30.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+
+        <article class="product-info">
+            <img src="graypants.jpg" alt="Gray Sweatpants" width="300" height="300" class="product-img" style="float: left;">
+            <div>
+                <h2>Gray Sweatpants</h2>
+                <p>Price: $20.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </article>
+    </section>
+
+    <div class="cart-actions">
+        <button class="Go-to-cart">Go to Cart</button>
     </div>
     
-    <div class="product-info">
-        <img src="denimpants.jpg" alt="Denim Pants" width="300" height="300">
-        <div>
-            <a href="#">Denim Pants</a>
-            <p>Price: $30.00</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    </div>
-    
-    <div class="product-info">
-        <img src="graypants.jpg" alt="Gray Sweatpants" width="300" height="300">
-        <div>
-            <a href="#">Gray Sweatpants</a>
-            <p>Price: $20.00</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    </div>
-
-    <button class="go-to-cart">Go to Cart</button>
-
     <footer>
         <p>&copy; 2024 It's New Again | <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
     </footer>
 </body>
 </html>
-
