@@ -113,6 +113,21 @@ input {
 .complete-purchase-button:hover {
     background-color: #fcdcdd;
 }
+
+.remove-item {
+      background-color: #c6d99a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-item:hover {
+    background-color: #fcdcdd;
+    
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
