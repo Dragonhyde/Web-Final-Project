@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    const shippingFee = 10.00; // Shipping fee
 
     if (cartContainer) { // Check if cart container exists
         if (cart.length === 0) {
@@ -27,9 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
             totalRow.className = 'cart-total';
             totalRow.innerHTML = `
                 <strong>Total:</strong>
-                <span>$${total.toFixed(2)}</span>
+                <span>$${(total + shippingFee).toFixed(2)}</span>
             `;
             cartContainer.appendChild(totalRow);
+
+            // Update the bolded total on the page
+            totalPriceElement.textContent = `$${(total + shippingFee).toFixed(2)}`;
         }
     }
 
