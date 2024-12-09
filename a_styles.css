@@ -1,10 +1,16 @@
+@font-face {
+    font-family: 'Harlow';
+    src: url('path-to-harlow.woff2') format('woff2');
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Acumin-variable', sans-serif;
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
     margin: 0;
     padding: 0;
-    background-color: #fefbde; 
-    color: #333; 
-    line-height: 1.8; 
+    background-color: #fefbde;
+    color: #333;
+    line-height: 1.8;
 }
 
 header {
@@ -18,8 +24,8 @@ h1 {
     margin: 0;
     color: white;
     font-size: 2.5rem;
+    font-family: 'Harlow', cursive; 
 }
-
 
 .nav-bar {
     display: flex;
@@ -47,12 +53,12 @@ h1 {
     background-color: #c6d99a;
     border-radius: 25px;  
     transition: background-color 0.3s;
+    font-family: 'Harlow', cursive; 
 }
 
 .nav-bar ul li a:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
-
 
 .checkout-button {
     background-color: #c6d99a;
@@ -64,16 +70,12 @@ h1 {
     position: absolute;
     top: 20px;
     right: 20px;
+    font-family: 'Harlow', cursive; 
 }
 
 .checkout-button:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
-
-nav ul li a:hover {
-    background-color: #c6d99a; 
-}
-
 
 .about-container {
     display: flex;
@@ -101,20 +103,12 @@ nav ul li a:hover {
 .about-text {
     flex: 2;
     padding-left: 20px;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    font-family: 'Georgia', serif; 
+    font-family: 'Acumin-variable', sans-serif; 
     color: #444; 
 }
 
 .about-text.fade-in {
     opacity: 1;
-}
-
-h1 {
-    color: #c6d99a; 
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 p {
@@ -125,6 +119,7 @@ p {
     letter-spacing: 0.5px;
     text-align: justify;
     max-width: 800px;
+    font-family: 'Acumin-variable', sans-serif; 
 }
 
 strong {
@@ -132,11 +127,9 @@ strong {
     font-weight: bold;
 }
 
-
 p:last-child {
     margin-bottom: 0;
 }
-
 
 @media (max-width: 768px) {
     .about-container {
@@ -154,6 +147,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    font-family: 'Acumin-variable', sans-serif; 
 }
 
 footer p {
@@ -165,8 +159,10 @@ footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    font-family: 'Harlow', cursive; 
 }
 
 footer a:hover {
     text-decoration: underline;
 }
+
