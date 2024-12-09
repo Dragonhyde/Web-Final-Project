@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Harlow';
-    src: url('path-to-harlow.woff2') format('woff2');
+    font-family: 'Harlow Solid Italic';
+    src: url('HARLOWSI_1.woff2') format('woff2');
+    font-style: italic;
+    font-weight: normal;
 }
 
 body {
