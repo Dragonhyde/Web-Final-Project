@@ -1,6 +1,16 @@
+/* Include custom font Harlow */
+@font-face {
+    font-family: 'Harlow Solid Italic';
+    src: url('HarlowSolidItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Global Styling */
 body {
     background-color: #fefbde;
-    font-family: Arial, sans-serif;
+    font-family: "acumin-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
     margin: 0;
     padding: 0;
 }
@@ -16,6 +26,7 @@ h1 {
     margin: 0;
     color: white;
     font-size: 2.5rem;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar {
@@ -42,12 +53,13 @@ h1 {
     text-decoration: none;
     padding: 10px 20px;
     background-color: #c6d99a;
-    border-radius: 25px;  
+    border-radius: 25px;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar ul li a:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
 
 .checkout-button {
@@ -55,15 +67,16 @@ h1 {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 25px;  
+    border-radius: 25px;
     cursor: pointer;
     position: absolute;
     top: 20px;
     right: 20px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .checkout-button:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
 
 .carousel-section {
@@ -75,7 +88,7 @@ h1 {
     position: relative;
     width: 80%;
     margin: auto;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .carousel-track {
@@ -84,11 +97,11 @@ h1 {
 }
 
 .carousel-image {
-    width: 33.33%; 
-    height: 200px; 
+    width: 33.33%;
+    height: 200px;
     margin: 0 10px;
-    object-fit: cover; 
-    border-radius: 10px; 
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .carousel-control {
@@ -112,23 +125,16 @@ h1 {
 }
 
 .shop-now {
-    display: inline-block; 
+    display: inline-block;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     background-color: #fcdcdd;
     border-radius: 25px;
     transition: background-color 0.3s;
-    margin-top: 20px; 
-    z-index: 1; 
+    margin-top: 20px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
-
-
-.shop-now-container {
-    text-align: center;
-    margin-top: 20px; 
-}
-
 
 .shop-now:hover {
     background-color: #c6d99a;
@@ -152,15 +158,16 @@ h1 {
 .aligned-image {
     width: 45%;
     height: auto;
-    border-radius: 15px; 
+    border-radius: 15px;
     margin-right: 30px;
 }
 
 .text-container {
     width: 55%;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #333;
+    font-family: "acumin-variable", sans-serif;
 }
 
 .text-container p {
@@ -170,9 +177,10 @@ h1 {
 }
 
 .read-more {
-    color: #d6e8b7; 
+    color: #d6e8b7;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .read-more:hover {
@@ -189,12 +197,14 @@ footer {
 footer p {
     color: white;
     margin: 0;
+    font-family: "acumin-variable", sans-serif;
 }
 
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    font-family: "acumin-variable", sans-serif;
 }
 
 footer a:hover {
@@ -223,3 +233,4 @@ footer a:hover {
         margin-right: 0;
     }
 }
+
