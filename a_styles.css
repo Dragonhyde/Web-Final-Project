@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Acumin-variable', sans-serif;
+    font-family: "acumin-variable", sans-serif;
     font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
     margin: 0;
     padding: 0;
@@ -26,7 +26,7 @@ h1 {
     margin: 0;
     color: white;
     font-size: 2.5rem;
-    font-family: 'Harlow', cursive; 
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar {
@@ -53,9 +53,9 @@ h1 {
     text-decoration: none;
     padding: 10px 20px;
     background-color: #c6d99a;
-    border-radius: 25px;  
+    border-radius: 25px;
     transition: background-color 0.3s;
-    font-family: 'Harlow', cursive; 
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar ul li a:hover {
@@ -67,12 +67,12 @@ h1 {
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 25px;  
+    border-radius: 25px;
     cursor: pointer;
     position: absolute;
     top: 20px;
     right: 20px;
-    font-family: 'Harlow', cursive; 
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .checkout-button:hover {
@@ -86,7 +86,7 @@ h1 {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .about-image {
@@ -105,27 +105,22 @@ h1 {
 .about-text {
     flex: 2;
     padding-left: 20px;
-    font-family: 'Acumin-variable', sans-serif; 
-    color: #444; 
+    font-family: "acumin-variable", sans-serif;
+    color: #333;
 }
 
-.about-text.fade-in {
-    opacity: 1;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #555; 
+.about-text p {
+    font-size: 1.2rem;
     line-height: 1.8;
+    color: #333;
     letter-spacing: 0.5px;
     text-align: justify;
     max-width: 800px;
-    font-family: 'Acumin-variable', sans-serif; 
+    font-family: "acumin-variable", sans-serif;
 }
 
-strong {
-    color: black; 
+.about-text strong {
+    color: black;
     font-weight: bold;
 }
 
@@ -149,19 +144,19 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
-    font-family: 'Acumin-variable', sans-serif; 
 }
 
 footer p {
     color: white;
     margin: 0;
+    font-family: "acumin-variable", sans-serif;
 }
 
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    font-family: 'Harlow', cursive; 
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 footer a:hover {
