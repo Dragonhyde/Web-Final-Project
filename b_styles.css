@@ -1,12 +1,18 @@
+@font-face {
+    font-family: 'Harlow Solid Italic';
+    src: url('HARLOWSI_1.woff2') format('woff2');
+    font-style: italic;
+    font-weight: normal;
+}
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "acumin-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
     margin: 0;
     padding: 0;
-    background-color: #fefbde; 
-    color: #333; 
-    line-height: 1.8; 
-    
+    background-color: #fefbde;
+    color: #333;
+    line-height: 1.8;
 }
 
 header {
@@ -18,12 +24,18 @@ header {
 
 h1 {
     margin: 0;
-    color: white;
+    color: #c6d99a;
     font-size: 2.5rem;
+    font-family: 'Harlow Solid Italic', cursive;
 }
-.product-text p{
-width: 60%; margin: auto; padding: 2rem;
-background-color: #c6d99a; border-radius: 30px 30px 30px 30px; color:#fefbde;
+
+.product-text p {
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    background-color: #c6d99a;
+    border-radius: 30px;
+    color: #fefbde;
 }
 
 .nav-bar {
@@ -50,38 +62,38 @@ background-color: #c6d99a; border-radius: 30px 30px 30px 30px; color:#fefbde;
     text-decoration: none;
     padding: 10px 20px;
     background-color: #c6d99a;
-    border-radius: 25px;  
+    border-radius: 25px;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar ul li a:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
-
 
 .checkout-button {
     background-color: #c6d99a;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 25px;  
+    border-radius: 25px;
     cursor: pointer;
     position: absolute;
     top: 20px;
     right: 20px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .checkout-button:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
 
-nav ul li a:hover {
-    background-color: #c6d99a; 
-}
 h1 {
-    color: #f9c1ca; 
+    color: #f9c1ca;
     font-size: 25px;
-    margin-bottom: 20px; width: 50%; margin: auto;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: auto;
 }
 
 p {
@@ -93,81 +105,100 @@ p {
     max-width: 800px;
 }
 
-.icon{
+.icon {
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
 }
-.add-to-cart{
+
+.add-to-cart {
     background-color: #f9c1ca;
-    color: #fefbde; 
-    border: none; 
-    padding: 0.5rem; 
+    color: #fefbde;
+    border: none;
+    padding: 0.5rem;
     border-radius: 5px;
 }
+
 .add-to-cart:hover {
-    background-color: #c6d99a; 
+    background-color: #c6d99a;
 }
+
 .product-info {
-    display: flex; align-items: center; margin-left: 20rem; padding: 3rem;
+    display: flex;
+    align-items: center;
+    margin-left: 20rem;
+    padding: 3rem;
 }
+
 .product-info img {
     margin-right: 20px;
     border-radius: 10px;
 }
-    .product-info div {
-        margin-left: 15rem; margin-bottom: 10rem;
-    }
-    .Go-to-cart{
-        border: none;
-        color: #fefbde;
-        background-color: #c6d99a;
-        margin-left: 45rem;
-        padding: 1rem;font-size: 15px;
-        border-radius: 10px;
-    }
+
+.product-info div {
+    margin-left: 15rem;
+    margin-bottom: 10rem;
+}
+
+.Go-to-cart {
+    border: none;
+    color: #fefbde;
+    background-color: #c6d99a;
+    margin-left: 45rem;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
 .Go-to-cart:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
 
 p:last-child {
     margin-bottom: 0;
 }
 
- a{
-    color: #f9c1ca; font-size: 20px;
+a {
+    color: #f9c1ca;
+    font-size: 20px;
 }
-section{
-    padding: 3rem; 
 
+section {
+    padding: 3rem;
 }
 
 @media (max-width: 768px) {
     .product-text {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         font-size: 10px;
         padding: 0.5rem;
     }
-    h1{
+
+    h1 {
         font-size: 15px;
     }
-    .product-info{
-        margin: auto;padding: 1rem; 
-    }
-    .product-info img {
-        width: 200px; 
-        height: auto; 
-    }
-    .product-info div {
-        margin-left: 5rem; margin-bottom: 3rem;
-    }
-    .Go-to-cart{
-        margin-left: 12rem;
-       
 
-}}
+    .product-info {
+        margin: auto;
+        padding: 1rem;
+    }
+
+    .product-info img {
+        width: 200px;
+        height: auto;
+    }
+
+    .product-info div {
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    .Go-to-cart {
+        margin-left: 12rem;
+    }
+}
 
 footer {
     background-color: #c6d99a;
@@ -185,6 +216,7 @@ footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 footer a:hover {
