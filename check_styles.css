@@ -95,6 +95,7 @@ input {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: left; /* Ensures input text is left-aligned */
 }
 
 .complete-purchase-button {
@@ -106,6 +107,7 @@ input {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive; /* Ensures the button uses the correct font */
 }
 
 .complete-purchase-button:hover {
@@ -121,6 +123,7 @@ input {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive; /* Ensures the button uses the correct font */
 }
 
 .remove-item:hover {
@@ -151,4 +154,13 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
