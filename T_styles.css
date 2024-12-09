@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'Harlow Solid Italic';
+    src: url('HARLOWSI_1.woff2') format('woff2');
+    font-style: italic;
+    font-weight: normal;
+}
+
 body {
     background-color: #fefbde;
-    font-family: Arial, sans-serif;
+    font-family: "acumin-variable", sans-serif;
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -29,6 +37,7 @@ header {
     background-color: #c6d99a;
     border-radius: 25px;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar ul li a:hover {
@@ -51,22 +60,13 @@ main {
     font-size: 5rem;
     color: #f9c1ca;
     margin-bottom: 20px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .thank-you-message .info {
     font-size: 1.5rem;
     color: #c6d99a;
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+    font-family: "acumin-variable", sans-serif;
 }
 
 footer {
@@ -79,14 +79,17 @@ footer {
 footer p {
     color: white;
     margin: 0;
+    font-family: "acumin-variable", sans-serif;
 }
 
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
+
