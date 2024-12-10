@@ -20,6 +20,13 @@ header {
     position: relative;
 }
 
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 h1 {
     margin: 0;
     color: #c6d99a;
@@ -161,7 +168,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 
 @media (max-width: 1024px) {
     .checkout-container {
