@@ -137,17 +137,20 @@ p {
 .product-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Adjusted to center align content */
     margin: 2rem 0;
     padding: 2rem;
     font-family: 'Harlow Solid Italic', cursive;
-    gap: 1rem; /* Add a small gap between image and text */
+    gap: 3rem; /* Adjusted the gap for more spacing */
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-info img {
     margin: 0;
     border-radius: 10px;
-    width: 150px;
+    width: 300px; /* Larger image size */
     height: auto;
     flex-shrink: 0;
 }
@@ -198,7 +201,7 @@ section {
 
     .product-info img {
         margin: 0 auto 20px auto;
-        width: 200px;
+        width: 250px;
         height: auto;
     }
 
