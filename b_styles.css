@@ -137,11 +137,11 @@ p {
 .product-info {
     display: flex;
     align-items: center;
-    justify-content: center; /* Adjusted to center align content */
+    justify-content: center;
     margin: 2rem 0;
     padding: 2rem;
     font-family: 'Harlow Solid Italic', cursive;
-    gap: 3rem; /* Adjusted the gap for more spacing */
+    gap: 3rem;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -150,7 +150,8 @@ p {
 .product-info img {
     margin: 0;
     border-radius: 10px;
-    width: 300px; /* Larger image size */
+    width: 100%;
+    max-width: 300px; 
     height: auto;
     flex-shrink: 0;
 }
@@ -202,6 +203,7 @@ section {
     .product-info img {
         margin: 0 auto 20px auto;
         width: 250px;
+        max-width: 100%;
         height: auto;
     }
 
@@ -233,3 +235,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
