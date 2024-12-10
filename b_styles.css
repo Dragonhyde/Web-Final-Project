@@ -82,6 +82,7 @@ h1 {
     top: 20px;
     right: 20px;
     font-family: 'Harlow Solid Italic', cursive;
+    width: auto;
 }
 
 .checkout-button:hover {
@@ -120,6 +121,8 @@ p {
     border: none;
     padding: 0.5rem;
     border-radius: 5px;
+    width: auto;
+    transition: background-color 0.3s;
 }
 
 .add-to-cart:hover {
@@ -170,6 +173,7 @@ p {
     border-radius: 10px;
     display: block;
     margin: 20px auto 0 auto;
+    width: auto;
 }
 
 .Go-to-cart:hover {
@@ -211,6 +215,12 @@ section {
         width: 100%;
         margin: 20px auto;
         text-align: center;
+    }
+
+    
+    .checkout-button, .add-to-cart, .Go-to-cart {
+        width: 100%; 
+        padding: 15px; 
     }
 }
 
