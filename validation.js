@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!valid) {
             alert(errorMessages.join("\n"));
         } else {
-            alert("Checkout successful!");
+            alert("Checkout successful! Redirecting...");
             window.location.href = 'Thanks.html';
         }
     });
@@ -140,4 +140,5 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value = postalCode;
     });
 });
+
 
