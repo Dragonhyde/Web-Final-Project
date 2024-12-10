@@ -152,6 +152,7 @@ p {
 .product-info div {
     flex: 1;
     padding: 1rem;
+    margin: 0; /* Ensure uniform spacing */
 }
 
 .Go-to-cart {
@@ -221,4 +222,3 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
