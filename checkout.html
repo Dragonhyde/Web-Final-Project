@@ -10,7 +10,7 @@
 
 <header>
     <div class="logo">
-        <img src="logo1.png" alt="company logo" class="logo">
+        <img src="logo1.png" alt="company logo" class="logo" width="200" height="100">
     </div>
     <nav class="nav-bar">
         <ul>
@@ -28,7 +28,7 @@
         <!-- Left: Order Summary -->
         <div class="order-summary">
             <h2>Order Summary</h2>
-             <ul id="cart-items"></ul>
+            <div id="cart-items"></div>
             <p>Shipping Fee: <strong id="shipping-fee">$10.00</strong></p>
             <p>Total: <strong id="total-price">$0.00</strong></p>
         </div>
@@ -38,46 +38,44 @@
             <fieldset>
                 <legend>Shipping Information</legend>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name"  required placeholder="e.g., John Doe">
-                
+                <input type="text" id="name" name="name" required placeholder="e.g., John Doe">
+
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required placeholder="e.g., 1234 moon DR">
-                
+                <input type="text" id="address" name="address" required placeholder="e.g., 1234 Moon Dr">
+
                 <label for="city">Town/City:</label>
                 <input type="text" id="city" name="city" required placeholder="e.g., Calgary">
-                
+
                 <label for="province">Province:</label>
                 <input type="text" id="province" name="province" required placeholder="e.g., Alberta">
-                
+
                 <label for="postal-code">Postal Code:</label>
-                <input type="text" id="postal-code" name="postal-code" pattern="[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d" required placeholder="A1A 1A1">
-                
+                <input type="text" id="postal-code" name="postal-code" pattern="[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d" required placeholder="e.g., T2N 1N4">
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required placeholder="e.g., John.Doe@email.com">
-                
+
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required placeholder="e.g., (123) 456-7890">
             </fieldset>
-        
+
             <fieldset>
                 <legend>Payment Details</legend>
-                <label for="card-name">Name on Card:</label>
-                <input type="text" id="card-name" name="card-name" required
-                placeholder="e.g., John Doe">
-                
+                <label for="name-on-card">Name on Card:</label>
+                <input type="text" id="name-on-card" name="name-on-card" required placeholder="e.g., John Doe">
+
                 <label for="card-number">Card Number:</label>
                 <input type="text" id="card-number" name="card-number" maxlength="16" required placeholder="e.g., 1234567890123456">
-                
+
                 <label for="expiry">Expiry Date:</label>
                 <input type="text" id="expiry" name="expiry" pattern="\d{2}/\d{2}" required placeholder="MM/YY">
-                
+
                 <label for="pin">PIN:</label>
                 <input type="password" id="pin" name="pin" maxlength="3" required placeholder="e.g., 123">
             </fieldset>
-            
-             <button type="submit" id="complete-purchase-button" class="complete-purchase-button">Complete Purchase</button>
+
+            <button type="submit" id="complete-purchase-button" class="complete-purchase-button">Complete Purchase</button>
         </form>
-        
     </section>
 </main>
 
