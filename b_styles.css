@@ -6,13 +6,11 @@
 }
 
 body {
+    background-color: #fefbde;
     font-family: "acumin-variable", sans-serif;
     font-variation-settings: "slnt" 0, "wdth" 100, "wght" 194.2857;
     margin: 0;
     padding: 0;
-    background-color: #fefbde;
-    color: #333;
-    line-height: 1.8;
 }
 
 header {
@@ -24,18 +22,9 @@ header {
 
 h1 {
     margin: 0;
-    color: #c6d99a;
+    color: white;
     font-size: 2.5rem;
     font-family: 'Harlow Solid Italic', cursive;
-}
-
-.product-text p {
-    width: 60%;
-    margin: auto;
-    padding: 2rem;
-    background-color: #c6d99a;
-    border-radius: 30px;
-    color: #fefbde;
 }
 
 .nav-bar {
@@ -70,7 +59,14 @@ h1 {
 .nav-bar ul li a:hover {
     background-color: #fcdcdd;
 }
-
+.product-text p {
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    background-color: #c6d99a;
+    border-radius: 30px;
+    color: #fefbde;
+}
 .checkout-button {
     background-color: #c6d99a;
     color: white;
