@@ -53,12 +53,13 @@ h1 {
     text-decoration: none;
     padding: 10px 20px;
     background-color: #c6d99a;
-    border-radius: 25px;  
+    border-radius: 25px;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .nav-bar ul li a:hover {
-    background-color: #fcdcdd; 
+    background-color: #fcdcdd;
 }
 
 main {
@@ -117,6 +118,7 @@ input {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .complete-purchase-button:hover {
@@ -132,6 +134,7 @@ input {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 .remove-item:hover {
@@ -143,6 +146,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+    font-family: 'Harlow Solid Italic', cursive;
 }
 
 footer p {
