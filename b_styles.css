@@ -126,7 +126,6 @@ p {
     background-color: #c6d99a;
 }
 
-
 .product-info:nth-child(odd) {
     flex-direction: row;
 }
@@ -150,15 +149,19 @@ p {
     border-radius: 10px;
     width: 150px;
     height: auto;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .product-info div {
-    flex: 1; 
+    flex: 1;
     padding: 0;
-    text-align: left; 
+    text-align: left;
 }
 
+.product-info p {
+    font-size: 14px;
+    color: #777;
+}
 
 .Go-to-cart {
     border: none;
