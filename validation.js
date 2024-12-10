@@ -51,6 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
         let valid = true;
         let errorMessages = [];
 
+        const nameOnCardField = document.getElementById('name-on-card');
+        const nameParts = nameOnCardField.value.trim().split(' ');
+        if (nameParts.length < 2 || nameParts.some(part => part.length < 2)) {
+            valid = false;
+            errorMessages.push("Name on card must include a first and last name, each at least 2 characters long.");
+        }
+
         const phoneField = document.getElementById('phone');
         let phone = phoneField.value.replace(/\D/g, "");
 
@@ -133,6 +140,4 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.value = postalCode;
     });
 });
-
-
 
